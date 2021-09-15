@@ -1,0 +1,33 @@
+{
+  "name": "marry-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wolfonye/marry-stats.git"
+  },
+  "author": "Wolfone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wolfonye/marry-stats/issues"
+  },
+  "homepage": "https://github.com/Wolfonye/marry-stats#readme",
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "sass": "^1.41.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "chart.js": "^3.5.1"
+  }
+}
