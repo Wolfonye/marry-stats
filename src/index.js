@@ -33,14 +33,20 @@ const config = {
       line: {
         borderWidth: 3
       }
+    },
+    scales: {
+        r: {
+            suggestedMin: 0,
+            suggestedMax: 10,
+        }
     }
-  }
+  },
 };
 
 $(function () {
     let svg = new Image();
     svg.src = Paladin;
-    $(".character-avatar").append(svg);
+    $(".character-avatar").prepend(svg);
     Chart.register(RadarController, LineElement, PointElement, RadialLinearScale, Title);
     new Chart($(".character-mainStats--radar-chart").get(), config);
 });
