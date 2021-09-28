@@ -7,31 +7,81 @@
     <title>Ein wichtiges Dokument</title>
 </head>
 <body>
-    <div class="character-card">
-        <div class="character-avatar"><span class="source">Source: sp-studio.de</span></div>
-        <div class="character-info">
-            <div class="name">Christokles</div>
-            <div class="title">der Verfolger</div>
-            <div class="class">Paladin</div>
-            <div class="faction">Latini</div>
-            <div class="description">
-                Einst war er ein Schriftgelehrter. Nun übt er sich in vielen Künsten und 
-                feilt ohne Unterlass an seinen Fähigkeiten.
+    <div class="characters">
+        <div class="character character-paladin">
+            <div class="character-card">
+                <div class="character-info">
+                    <div class="character-info--upper">
+                        <div class="character-info--upperLeft">
+                            <span class="name">Christokles</span>
+                            <span class="title">der Verfolger</span>
+                            <div class="character-prop">
+                                <span class="character-prop-name">Klasse: </span><span class="character-prop-value class">Paladin</span>
+                            </div>
+                            <div class="character-prop">
+                                <span class="character-prop-name">Gilde: </span><span class="character-prop-value faction">Latini</span>
+                            </div>
+                        </div>
+                        <div class="character-avatar"></div>
+                    </div>
+                    <div class="description">
+                        Einst war er ein Schriftgelehrter. Nun übt er sich in vielen Künsten und 
+                        feilt ohne Unterlass an seinen Fähigkeiten, um der mächtigste Paladin
+                        des alten Prokrastinator-Ordens zu werden.
+                    </div>
+                </div>
+                <div class="character-mainStats">
+                    <div class="character-mainStats--chartContainer">
+                        <canvas class="character-mainStats--radar-chart"></canvas>
+                    </div>
+                </div>
+                <div class="character-skills">
+                    <div class="skill">
+                        <span class="skill-name"></span>
+                        <span class="skill-lvl"></span>
+                    </div>
+                </div>
+                <div class="character-talents">
+                    <div class="talent"></div>
+                </div>
             </div>
         </div>
-        <div class="character-mainStats">
-            <div class="character-mainStats--chartContainer">
-                <canvas class="character-mainStats--radar-chart"></canvas>
+        <div class="character-goodFairy">
+            <div class="character-card">
+                <div class="character-info">
+                    <div class="character-info--upper">
+                        <div class="character-info--upperLeft">
+                            <span class="name">Kathy</span>
+                            <span class="title">die Ruhende</span>
+                            <div class="character-prop">
+                                <span class="character-prop-name">Klasse: </span><span class="character-prop-value class">Gute Fee</span>
+                            </div>
+                            <div class="character-prop">
+                                <span class="character-prop-name">Gilde: </span><span class="character-prop-value faction">Latini</span>
+                            </div>
+                        </div>
+                        <div class="character-avatar"></div>
+                    </div>
+                    <div class="description">
+                        Ein Verständige der schönen Künste und Kind der Südlande. Jeder weiß um ihr unermüdliches Bestreben 
+                        ihre besonderen Kräfte zu nutzen, um Frieden zu bringen, wo Chaos herrscht.
+                    </div>
+                </div>
+                <div class="character-mainStats">
+                    <div class="character-mainStats--chartContainer">
+                        <canvas class="character-mainStats--radar-chart"></canvas>
+                    </div>
+                </div>
+                <div class="character-skills">
+                    <div class="skill">
+                        <span class="skill-name"></span>
+                        <span class="skill-lvl"></span>
+                    </div>
+                </div>
+                <div class="character-talents">
+                    <div class="talent"></div>
+                </div>
             </div>
-        </div>
-        <div class="character-skills">
-            <div class="skill">
-                <span class="skill-name"></span>
-                <span class="skill-lvl"></span>
-            </div>
-        </div>
-        <div class="character-talents">
-            <div class="talent"></div>
         </div>
     </div>
 </body>
