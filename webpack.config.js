@@ -28,9 +28,7 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|otf)$/,
-        use: {
-          loader: 'url-loader',
-        },
+        type: 'asset/resource'
       },
     ]
   },

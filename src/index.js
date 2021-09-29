@@ -5,9 +5,12 @@ import $ from "jquery";
 import Paladin from "./paladin.svg";
 import GoodFairy from "./goodFairy.svg";
 
+
+Chart.defaults.font.family = "Minecraft";
+
 const dataPaladin = {
   labels: [
-    'Stärke',
+    'Kampfstärke',
     'Geschick',
     'Intelligenz',
     'Zurückhaltung',
@@ -15,7 +18,7 @@ const dataPaladin = {
   ],
   datasets: [{
     label: 'Paladin',
-    data: [5, 7, 8, 1, 10],
+    data: [8, 7, 8, 1, 10],
     fill: true,
     backgroundColor: 'rgba(255, 99, 132, 0.2)',
     borderColor: 'rgb(255, 99, 132)',
@@ -47,14 +50,14 @@ const configPaladin = {
 const dataGoodFairy = {
   labels: [
     'Charisma',
-    'Geschick',
+    'Magie',
     'Intelligenz',
     'Zurückhaltung',
     'Loyalität',
   ],
   datasets: [{
     label: 'GoodFairy',
-    data: [8, 7, 8, 7, 10],
+    data: [8, 8, 8, 7, 10],
     fill: true,
     backgroundColor: 'rgba(255, 99, 132, 0.2)',
     borderColor: 'rgb(255, 99, 132)',
@@ -66,21 +69,30 @@ const dataGoodFairy = {
 };
 
 const configGoodFairy = {
-  type: "radar",
-  data: dataGoodFairy,
-  options: {
-    elements: {
-      line: {
-        borderWidth: 3
-      }
-    },
-    scales: {
-        r: {
-            suggestedMin: 0,
-            suggestedMax: 10,
+    type: "radar",
+    data: dataGoodFairy,
+    options: {
+        elements: {
+            line: {
+                borderWidth: 3
+            }
+        },
+        scales: {
+            r: {
+                suggestedMin: 0,
+                suggestedMax: 10,
+            }
+        },
+        plugins: {
+            legend : {
+                labels: {
+                    font: {
+                       family: "'Minecraft', sans-serif"
+                    }
+                }
+            }
         }
     }
-  },
 };
 
 $(function () {

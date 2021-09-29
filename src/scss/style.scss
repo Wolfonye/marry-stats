@@ -1,3 +1,5 @@
+@import "node_modules/pixel-borders/src/styles/pixel-borders.scss";
+
 @font-face {
   font-family: 'Minecraft';
   font-style: normal;
@@ -24,7 +26,6 @@ html {
     background-color: $backgroundColor;
     padding: 10px;
     max-width: 400px;
-    border: 2px solid $textColor;
 }
 
 .character-mainStats--chartContainer {
