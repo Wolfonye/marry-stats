@@ -22,12 +22,24 @@ html {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    justify-content: space-around;
 }
 
 .character-card {
     background-color: $backgroundColor;
     padding: 10px;
-    max-width: 380px;
+    width: 90vw;
+    max-width: 400px;
+}
+
+@media only screen and (max-width: 920px) {
+    .characters {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .character-mainStats--chartContainer {
