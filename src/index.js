@@ -7,6 +7,7 @@ import GoodFairy from "./goodFairy.svg";
 
 
 Chart.defaults.font.family = "Minecraft";
+Chart.defaults.font.size = 20;
 
 const dataPaladin = {
   labels: [
@@ -83,15 +84,6 @@ const configGoodFairy = {
                 suggestedMax: 10,
             }
         },
-        plugins: {
-            legend : {
-                labels: {
-                    font: {
-                       family: "'Minecraft', sans-serif"
-                    }
-                }
-            }
-        }
     }
 };
 
