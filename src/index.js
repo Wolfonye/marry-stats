@@ -4,10 +4,13 @@ import './scss/style.scss';
 import $ from "jquery";
 import Paladin from "./paladin.svg";
 import GoodFairy from "./goodFairy.svg";
+import Ring from "./rings.svg";
 
 
 Chart.defaults.font.family = "Minecraft";
 Chart.defaults.font.size = 20;
+Chart.defaults.color = "#fff2e1";
+Chart.defaults.borderColor = "#fff2e1";
 
 const dataPaladin = {
   labels: [
@@ -95,6 +98,10 @@ $(function () {
     let svgGoodFairy = new Image();
     svgGoodFairy.src = GoodFairy;
     $(".character-goodFairy .character-avatar").prepend(svgGoodFairy);
+
+    let ring = new Image();
+    ring.src = Ring;
+    $(".ring").append(ring);
 
     Chart.register(RadarController, LineElement, PointElement, RadialLinearScale, Title);
     new Chart($(".character-paladin .character-mainStats--radar-chart").get(), configPaladin);

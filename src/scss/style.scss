@@ -8,9 +8,9 @@
     url('../MinecraftRegular-Bmg3.otf') format('opentype'),
 }
 
-$textColor: #2c2c2c;
-$backgroundColor: #ffffff;
-$accentColor: #9e9e9e;
+$textColor: #fff2e1;
+$backgroundColor: #807070;
+$accentColor: #756352;
 
 html {
     color: $textColor;
@@ -21,8 +21,8 @@ html {
 .characters {
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
     justify-content: space-around;
+    align-items: center;
 }
 
 .character-card {
@@ -30,15 +30,16 @@ html {
     padding: 10px;
     width: 90vw;
     max-width: 400px;
+    margin: 0;
 }
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1020px) {
     .characters {
         display: flex;
         flex-wrap: wrap;
-        margin: auto;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
     }
 }
 
@@ -66,7 +67,6 @@ html {
     align-items: flex-start;
     height: 180px;
     width: 180px;
-    border: 2px solid black;
 }
 
 .character-mainStats {
@@ -102,4 +102,10 @@ html {
 
 .description {
     text-align: justify;
+}
+
+.ring {
+    margin: 10px 20px;
+    width: 90px;
+    height: 60px;
 }
