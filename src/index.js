@@ -11,6 +11,7 @@ Chart.defaults.font.family = "Minecraft";
 Chart.defaults.font.size = 20;
 Chart.defaults.color = "#fff2e1";
 Chart.defaults.borderColor = "#fff2e1";
+Chart.defaults.backgroundColor = "#fff2e1";
 
 const dataPaladin = {
   labels: [
@@ -24,9 +25,9 @@ const dataPaladin = {
     label: 'Paladin',
     data: [8, 7, 8, 1, 10],
     fill: true,
-    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-    borderColor: 'rgb(255, 99, 132)',
-    pointBackgroundColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(255, 255, 255, 1.0)',
+    borderColor: '#ff9000',
+    pointBackgroundColor: '#ff9000',
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
     pointHoverBorderColor: 'rgb(255, 99, 132)'
@@ -44,6 +45,10 @@ const configPaladin = {
     },
     scales: {
         r: {
+            ticks: {
+                display: false,
+                stepSize: 2,
+            },
             suggestedMin: 0,
             suggestedMax: 10,
         }
@@ -63,9 +68,9 @@ const dataGoodFairy = {
     label: 'GoodFairy',
     data: [8, 8, 8, 7, 10],
     fill: true,
-    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-    borderColor: 'rgb(255, 99, 132)',
-    pointBackgroundColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(255, 0, 0, 1.0)',
+    borderColor: '#ff9000',
+    pointBackgroundColor: '#ff9000',
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
     pointHoverBorderColor: 'rgb(255, 99, 132)'
@@ -83,6 +88,10 @@ const configGoodFairy = {
         },
         scales: {
             r: {
+                ticks: {
+                    display: false,
+                    stepSize: 2,
+                },
                 suggestedMin: 0,
                 suggestedMax: 10,
             }
