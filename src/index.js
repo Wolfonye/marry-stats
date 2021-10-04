@@ -100,13 +100,46 @@ const configGoodFairy = {
 };
 
 $(function () {
+    let input = document.getElementById("le-input");
+    let button = document.getElementById("le-button");
+
+    input.addEventListener("keyup", function (event) {
+        if (event.code === "Enter") {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            button.click();
+        }
+    });
     let $input = $(".le-input");
     $("form").on("submit", (e) => {e.preventDefault();})
+    let $failText = $(".fail-text");
     $(".le-button").on('click', 
         () => {
-            if (hash($input.val()) === -1436117927) {
-                $(".characters").removeClass("hidden");
-                $(".pseudo-login").addClass("hidden");
+            if (hash($input.val()) === -1436117927
+                || hash($input.val()) === 1547226824
+                || hash($input.val()) === -1569982744
+                || hash($input.val()) === -642826119) {
+                $(".transition-text-1").fadeIn(1300).promise()
+                    .then(() => $(".transition-text-2").fadeIn(1300).delay(1500).promise())
+                    .then(() => $(".pseudo-login").fadeOut(1300).promise())
+                    .then(() => $(".characters").fadeIn(1300));
+            }else{
+                let failAnswers = [
+                    "Grauenhaft...",
+                    "Schrecklich...",
+                    "Enttäuschend...",
+                    "Viel du noch lernen musst...",
+                    "Deine Ahnen weinen bitterlich ob deiner Torheit!",
+                    "Du denkst wahrscheinlich auch Mozart hätte diese süßen Kugeln erfunden, was?",
+                    "Sitzt du auch abends auf dem Fernseher und guckst Couch?",
+                    "Egal wie tief du im Keller bohrst...Maggi findest du trotzdem nicht!",
+                    "Naja...Unwissenheit ist ja auch manchmal ein Segen, nicht wahr?",
+                    "Naja...Unwissenheit ist ja auch manchmal ein Segen, nicht wahr?",
+                ];
+                $failText.html(failAnswers[Math.floor(Math.random() * failAnswers.length)])
+                $(".fail-text").fadeIn(1300).delay(1500).promise()
+                    .then(() => $(".fail-text").fadeOut(1300).promise());
             }
         }
     );

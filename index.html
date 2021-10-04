@@ -10,11 +10,16 @@
     <div class="pseudo-login">
         <form action="">
             <label for="passphrase">Sprich Lateiner! Rühme deinen dreifachen Erfolg!</label>
-            <input name="passphrase" type="text" class="le-input pixel-borders pixel-borders--2">
-            <input type="button" value="OK" class="le-button pixel-borders pixel-borders--2">
+            <input id="le-input" name="passphrase" type="text" class="le-input pixel-borders pixel-borders--2">
+            <input id="le-button" type="button" value="OK" class="le-button pixel-borders pixel-borders--2">
         </form>
+        <div class="text-container" style="height: 100px;">
+            <div class="fail-text" style="display:none;">Grauenhafte Wahl...</div>
+            <div class="transition-text-1" style="display:none;">Deine Wahl war...</div>
+            <div class="transition-text-2" style="display:none;">...weise!</div>
+        </div>
     </div>
-    <div class="characters hidden">
+    <div class="characters" style="display:none;">
         <div class="character character-paladin">
             <div class="character-card pixel-borders pixel-borders--2">
                 <div class="character-info">

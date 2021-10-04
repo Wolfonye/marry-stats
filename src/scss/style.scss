@@ -34,7 +34,7 @@ html {
 }
 
 form {
-    max-width: 400px;
+    text-align: center;
     display: flex;
     flex-direction: column;
 }
@@ -43,10 +43,37 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
+    justify-content: space-around;
 }
 
 label {
     font-size: 24px;
+}
+
+input {
+    margin-right: 0 !important; 
+}
+
+.pseudo-login {
+    max-width: 400px;
+}
+
+.text-container {
+    text-align: center;
+}
+
+.transition-text-1 {
+    font-size: 22px;
+}
+
+.transition-text-2 {
+    font-size: 28px;
+}
+
+.fail-text {
+    font-size: 18px;
+    color: rgb(255, 110, 110);
 }
 
 .characters {
