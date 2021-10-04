@@ -1,5 +1,9 @@
 @import "node_modules/pixel-borders/src/styles/pixel-borders.scss";
 
+$textColor: #fff2e1;
+$backgroundColor: #807070;
+$accentColor: #756352;
+
 @font-face {
   font-family: 'Minecraft';
   font-style: normal;
@@ -8,14 +12,41 @@
     url('../MinecraftRegular-Bmg3.otf') format('opentype'),
 }
 
-$textColor: #fff2e1;
-$backgroundColor: #807070;
-$accentColor: #756352;
+.le-input, .le-button {
+    padding: 8px 16px;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.le-input:focus-visible {
+  outline: none;
+}
+
+.le-button {
+    color: $textColor;
+    background-color: $backgroundColor;
+}
 
 html {
     color: $textColor;
     font-family: Minecraft;
     background-color: $accentColor;
+}
+
+form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 24px;
 }
 
 .characters {
@@ -108,4 +139,8 @@ html {
     margin: 10px 20px;
     width: 90px;
     height: 60px;
+}
+
+.hidden {
+    display: none;
 }

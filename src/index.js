@@ -100,6 +100,17 @@ const configGoodFairy = {
 };
 
 $(function () {
+    let $input = $(".le-input");
+    $("form").on("submit", (e) => {e.preventDefault();})
+    $(".le-button").on('click', 
+        () => {
+            if (hash($input.val()) === -1436117927) {
+                $(".characters").removeClass("hidden");
+                $(".pseudo-login").addClass("hidden");
+            }
+        }
+    );
+
     let svgPaladin = new Image();
     svgPaladin.src = Paladin;
     $(".character-paladin .character-avatar").prepend(svgPaladin);
@@ -118,3 +129,17 @@ $(function () {
     Chart.register(RadarController, LineElement, PointElement, RadialLinearScale, Title);
     new Chart($(".character-goodFairy .character-mainStats--radar-chart").get(), configGoodFairy);
 });
+
+function hash(string) {
+    let hash = 0;
+        
+    if (string.length == 0) return hash;
+        
+    for (let i = 0; i < string.length; i++) {
+        let char = string.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash;
+    }
+        
+    return hash;
+}
