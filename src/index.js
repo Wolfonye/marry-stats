@@ -15,11 +15,11 @@ Chart.defaults.backgroundColor = "#fff2e1";
 
 const dataPaladin = {
   labels: [
-    'Kampfstärke',
+    'Kampfstaerke',
     'Geschick',
     'Intelligenz',
-    'Zurückhaltung',
-    'Loyalität',
+    'Zurueckhaltung',
+    'Loyalitaet',
   ],
   datasets: [{
     label: 'Paladin',
@@ -61,8 +61,8 @@ const dataGoodFairy = {
     'Charisma',
     'Magie',
     'Intelligenz',
-    'Zurückhaltung',
-    'Loyalität',
+    'Zurueckhaltung',
+    'Loyalitaet',
   ],
   datasets: [{
     label: 'GoodFairy',
@@ -123,18 +123,17 @@ $(function () {
                 $(".transition-text-1").fadeIn(1300).promise()
                     .then(() => $(".transition-text-2").fadeIn(1300).delay(1500).promise())
                     .then(() => $(".pseudo-login").fadeOut(1300).promise())
-                    .then(() => $(".characters").fadeIn(1300));
+                    .then(() => $(".content").fadeIn(1300));
             }else{
                 let failAnswers = [
                     "Grauenhaft...",
                     "Schrecklich...",
-                    "Enttäuschend...",
+                    "Enttaeuschend...",
                     "Viel du noch lernen musst...",
                     "Deine Ahnen weinen bitterlich ob deiner Torheit!",
-                    "Du denkst wahrscheinlich auch Mozart hätte diese süßen Kugeln erfunden, was?",
+                    "Du denkst wahrscheinlich auch Mozart haette diese suessen Kugeln erfunden, was?",
                     "Sitzt du auch abends auf dem Fernseher und guckst Couch?",
                     "Egal wie tief du im Keller bohrst...Maggi findest du trotzdem nicht!",
-                    "Naja...Unwissenheit ist ja auch manchmal ein Segen, nicht wahr?",
                     "Naja...Unwissenheit ist ja auch manchmal ein Segen, nicht wahr?",
                 ];
                 $failText.html(failAnswers[Math.floor(Math.random() * failAnswers.length)])

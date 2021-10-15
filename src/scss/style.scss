@@ -49,6 +49,7 @@ body {
 
 label {
     font-size: 24px;
+    margin-bottom: 12px;
 }
 
 input {
@@ -74,6 +75,10 @@ input {
 .fail-text {
     font-size: 18px;
     color: rgb(255, 110, 110);
+}
+
+.content {
+    margin-bottom: 15px;
 }
 
 .characters {
@@ -166,6 +171,13 @@ input {
     margin: 10px 20px;
     width: 90px;
     height: 60px;
+}
+
+.story-text {
+    font-size: 22px;
+    text-align: justify;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .hidden {
